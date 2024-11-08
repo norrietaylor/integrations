@@ -46,7 +46,7 @@ policy_templates:
             title: API Token
             description: API Token with API Access Level type.
             required: true
-            secret: true
+ 3           secret: true
           - name: proxy_url
             type: text
             title: Proxy URL
