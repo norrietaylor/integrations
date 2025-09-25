@@ -3,7 +3,7 @@ description: Pipeline for parsing Suricata EVE logs
 processors:
   - set:
       field: ecs.version
-      value: '8.11.0'
+      value: '8.17.0'
   - set:
       if: ctx.tags != null && ctx.tags.contains('forwarded')
       field: observer.product
@@ -676,11 +676,6 @@ processors:
         - suricata.eve.dest_port
         - dns.question.domain
         - _tmp_
-      ignore_missing: true
-  - remove:
-      field: event.original
-      if: "ctx?.tags == null || !(ctx.tags.contains('preserve_original_event'))"
-      ignore_failure: true
       ignore_missing: true
 on_failure:
   - set:

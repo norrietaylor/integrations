@@ -20,7 +20,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "Accept",
@@ -48,7 +48,8 @@
                     "192.168.1.153"
                 ],
                 "user": [
-                    "testUser"
+                    "9cd56553-3079-4873-8f19-46bee168b44a",
+                    "testuser"
                 ]
             },
             "rule": {
@@ -58,7 +59,7 @@
                 "ip": "192.168.1.153",
                 "user": {
                     "id": "9cd56553-3079-4873-8f19-46bee168b44a",
-                    "name": "testUser"
+                    "name": "testuser"
                 }
             },
             "tags": [
@@ -88,7 +89,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "Accept",
@@ -116,14 +117,15 @@
                     "192.168.1.153"
                 ],
                 "user": [
-                    "testUser"
+                    "9a53d1d3-273a-4106-bc7d-9edb225d927e",
+                    "testuser"
                 ]
             },
             "source": {
                 "ip": "192.168.1.153",
                 "user": {
                     "id": "9a53d1d3-273a-4106-bc7d-9edb225d927e",
-                    "name": "testUser"
+                    "name": "testuser"
                 }
             },
             "tags": [
@@ -153,7 +155,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "Accept",
@@ -181,14 +183,15 @@
                     "192.168.1.153"
                 ],
                 "user": [
-                    "testUser"
+                    "169949b7-51ee-4195-b7c8-a586fefc3b7c",
+                    "testuser"
                 ]
             },
             "source": {
                 "ip": "192.168.1.153",
                 "user": {
                     "id": "169949b7-51ee-4195-b7c8-a586fefc3b7c",
-                    "name": "testUser"
+                    "name": "testuser"
                 }
             },
             "tags": [
@@ -219,7 +222,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "Accept",
@@ -246,7 +249,8 @@
                     "172.16.1.190"
                 ],
                 "user": [
-                    "System"
+                    "efa04289-5905-4583-82a5-a576c33a72c4",
+                    "system"
                 ]
             },
             "rule": {
@@ -256,7 +260,7 @@
                 "ip": "172.16.1.190",
                 "user": {
                     "id": "efa04289-5905-4583-82a5-a576c33a72c4",
-                    "name": "System"
+                    "name": "system"
                 }
             },
             "tags": [
@@ -277,7 +281,7 @@
                 "origin_sic_name": "cn=cp_mgmt,o=auditTest..aw4c8s"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "logged-out",
@@ -338,7 +342,7 @@
                 "origin_sic_name": "cn=cp_mgmt,o=auditTest..aw4c8s"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "logged-in",
@@ -401,7 +405,7 @@
                 "session_uid": "d5c7cc4f-01ea-4ac7-8de1-72ae05d28bc6"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "Accept",
@@ -429,13 +433,13 @@
                     "172.16.1.190"
                 ],
                 "user": [
-                    "System"
+                    "system"
                 ]
             },
             "source": {
                 "ip": "172.16.1.190",
                 "user": {
-                    "name": "System"
+                    "name": "system"
                 }
             },
             "tags": [
@@ -465,7 +469,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "Accept",
@@ -492,7 +496,8 @@
                     "172.16.1.190"
                 ],
                 "user": [
-                    "System"
+                    "30d36d30-6a20-4336-98ee-37c25d52d4db",
+                    "system"
                 ]
             },
             "rule": {
@@ -502,7 +507,7 @@
                 "ip": "172.16.1.190",
                 "user": {
                     "id": "30d36d30-6a20-4336-98ee-37c25d52d4db",
-                    "name": "System"
+                    "name": "system"
                 }
             },
             "tags": [
@@ -531,7 +536,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "Accept",
@@ -559,13 +564,13 @@
                     "172.16.1.190"
                 ],
                 "user": [
-                    "System"
+                    "system"
                 ]
             },
             "source": {
                 "ip": "172.16.1.190",
                 "user": {
-                    "name": "System"
+                    "name": "system"
                 }
             },
             "tags": [
@@ -593,7 +598,7 @@
                 "tasktargetid": "e62ce0ce-d7ec-45c7-6bd6-0cdfa6687f3b"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "Forgot Passcode",
@@ -656,7 +661,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "Accept",
@@ -683,7 +688,8 @@
                     "172.16.1.190"
                 ],
                 "user": [
-                    "System"
+                    "f5cb2423-5ea6-4116-8858-faed44e3047e",
+                    "system"
                 ]
             },
             "rule": {
@@ -693,7 +699,7 @@
                 "ip": "172.16.1.190",
                 "user": {
                     "id": "f5cb2423-5ea6-4116-8858-faed44e3047e",
-                    "name": "System"
+                    "name": "system"
                 }
             },
             "tags": [
@@ -722,7 +728,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "Accept",
@@ -750,13 +756,13 @@
                     "172.16.1.190"
                 ],
                 "user": [
-                    "Scheduled system update"
+                    "scheduled system update"
                 ]
             },
             "source": {
                 "ip": "172.16.1.190",
                 "user": {
-                    "name": "Scheduled system update"
+                    "name": "scheduled system update"
                 }
             },
             "tags": [

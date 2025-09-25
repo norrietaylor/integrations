@@ -10,7 +10,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "email": {
                 "from": {
@@ -63,6 +63,10 @@
                 "hosts": [
                     "testhost.local",
                     "elasticuser.com"
+                ],
+                "user": [
+                    "firewall",
+                    "firewall@firewallgate.com"
                 ]
             },
             "sophos": {
@@ -89,7 +93,9 @@
                 "domain": "elasticuser.com",
                 "port": 0,
                 "user": {
-                    "email": "firewall@firewallgate.com"
+                    "domain": "firewallgate.com",
+                    "email": "firewall@firewallgate.com",
+                    "name": "firewall"
                 }
             },
             "tags": [
@@ -119,7 +125,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "email": {
                 "from": {
@@ -176,6 +182,10 @@
                 ],
                 "ip": [
                     "175.16.199.1"
+                ],
+                "user": [
+                    "telekommunikation",
+                    "telekommunikation@constant-big.email"
                 ]
             },
             "sophos": {
@@ -217,7 +227,9 @@
                 "ip": "175.16.199.1",
                 "port": 52742,
                 "user": {
-                    "email": "telekommunikation@constant-big.email"
+                    "domain": "constant-big.email",
+                    "email": "telekommunikation@constant-big.email",
+                    "name": "telekommunikation"
                 }
             },
             "tags": [
@@ -247,7 +259,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "email": {
                 "from": {
@@ -306,6 +318,10 @@
                 ],
                 "ip": [
                     "175.16.199.1"
+                ],
+                "user": [
+                    "ripxfc",
+                    "ripxfc@17buddies.net"
                 ]
             },
             "sophos": {
@@ -347,7 +363,9 @@
                 "ip": "175.16.199.1",
                 "port": 51789,
                 "user": {
-                    "email": "ripxfc@17buddies.net"
+                    "domain": "17buddies.net",
+                    "email": "ripxfc@17buddies.net",
+                    "name": "ripxfc"
                 }
             },
             "tags": [
@@ -377,7 +395,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "email": {
                 "from": {
@@ -436,6 +454,10 @@
                 ],
                 "ip": [
                     "175.16.199.1"
+                ],
+                "user": [
+                    "SHERIF.TOBGI",
+                    "SHERIF.TOBGI@ELTOBGI.COM"
                 ]
             },
             "sophos": {
@@ -477,7 +499,9 @@
                 "ip": "175.16.199.1",
                 "port": 55002,
                 "user": {
-                    "email": "SHERIF.TOBGI@ELTOBGI.COM"
+                    "domain": "ELTOBGI.COM",
+                    "email": "SHERIF.TOBGI@ELTOBGI.COM",
+                    "name": "SHERIF.TOBGI"
                 }
             },
             "tags": [
@@ -495,7 +519,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "email": {
                 "from": {
@@ -554,6 +578,10 @@
                 "ip": [
                     "10.198.47.71",
                     "10.198.233.61"
+                ],
+                "user": [
+                    "gaurav1",
+                    "gaurav1@iview.com"
                 ]
             },
             "sophos": {
@@ -584,7 +612,9 @@
                 "ip": "10.198.47.71",
                 "port": 22420,
                 "user": {
-                    "email": "gaurav1@iview.com"
+                    "domain": "iview.com",
+                    "email": "gaurav1@iview.com",
+                    "name": "gaurav1"
                 }
             },
             "tags": [
@@ -602,7 +632,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "email": {
                 "from": {
@@ -662,6 +692,10 @@
                 "ip": [
                     "10.198.16.121",
                     "10.198.234.240"
+                ],
+                "user": [
+                    "pankhil",
+                    "pankhil@postman.local"
                 ]
             },
             "sophos": {
@@ -691,7 +725,9 @@
                 "ip": "10.198.16.121",
                 "port": 58043,
                 "user": {
-                    "email": "pankhil@postman.local"
+                    "domain": "postman.local",
+                    "email": "pankhil@postman.local",
+                    "name": "pankhil"
                 }
             },
             "tags": [
@@ -709,7 +745,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "email": {
                 "from": {
@@ -769,6 +805,10 @@
                 "ip": [
                     "10.198.16.121",
                     "10.198.17.121"
+                ],
+                "user": [
+                    "pankhil",
+                    "pankhil@postman.local"
                 ]
             },
             "sophos": {
@@ -798,7 +838,9 @@
                 "ip": "10.198.16.121",
                 "port": 60134,
                 "user": {
-                    "email": "pankhil@postman.local"
+                    "domain": "postman.local",
+                    "email": "pankhil@postman.local",
+                    "name": "pankhil"
                 }
             },
             "tags": [
@@ -816,7 +858,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "email": {
                 "from": {
@@ -874,6 +916,10 @@
                 "ip": [
                     "10.198.16.121",
                     "10.198.16.204"
+                ],
+                "user": [
+                    "pankhil",
+                    "pankhil@postman.local"
                 ]
             },
             "sophos": {
@@ -903,7 +949,9 @@
                 "ip": "10.198.16.121",
                 "port": 60298,
                 "user": {
-                    "email": "pankhil@postman.local"
+                    "domain": "postman.local",
+                    "email": "pankhil@postman.local",
+                    "name": "pankhil"
                 }
             },
             "tags": [
@@ -918,7 +966,7 @@
                 "port": 25
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "Dos",
@@ -1005,7 +1053,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "email": {
                 "from": {
@@ -1065,6 +1113,10 @@
                 "ip": [
                     "10.198.16.121",
                     "10.198.17.121"
+                ],
+                "user": [
+                    "pankhil1",
+                    "pankhil1@postman.local"
                 ]
             },
             "sophos": {
@@ -1093,7 +1145,9 @@
                 "ip": "10.198.16.121",
                 "port": 60608,
                 "user": {
-                    "email": "pankhil1@postman.local"
+                    "domain": "postman.local",
+                    "email": "pankhil1@postman.local",
+                    "name": "pankhil1"
                 }
             },
             "tags": [
@@ -1111,7 +1165,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "email": {
                 "from": {
@@ -1170,6 +1224,10 @@
                 "ip": [
                     "10.198.47.71",
                     "10.198.233.61"
+                ],
+                "user": [
+                    "gaurav1",
+                    "gaurav1@iview.com"
                 ]
             },
             "sophos": {
@@ -1201,7 +1259,9 @@
                 "ip": "10.198.47.71",
                 "port": 22333,
                 "user": {
-                    "email": "gaurav1@iview.com"
+                    "domain": "iview.com",
+                    "email": "gaurav1@iview.com",
+                    "name": "gaurav1"
                 }
             },
             "tags": [
@@ -1228,7 +1288,7 @@
                 "port": 80
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "Virus",
@@ -1351,7 +1411,7 @@
                 "port": 80
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "Virus",
@@ -1477,7 +1537,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "email": {
                 "from": {
@@ -1535,6 +1595,10 @@
                 ],
                 "ip": [
                     "175.16.199.1"
+                ],
+                "user": [
+                    "info",
+                    "info@farasamed.com"
                 ]
             },
             "rule": {
@@ -1578,7 +1642,9 @@
                 "ip": "175.16.199.1",
                 "port": 56336,
                 "user": {
-                    "email": "info@farasamed.com"
+                    "domain": "farasamed.com",
+                    "email": "info@farasamed.com",
+                    "name": "info"
                 }
             },
             "tags": [
@@ -1608,7 +1674,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "email": {
                 "from": {
@@ -1666,6 +1732,10 @@
                 ],
                 "ip": [
                     "175.16.199.1"
+                ],
+                "user": [
+                    "spedizioni",
+                    "spedizioni@divella.it"
                 ]
             },
             "rule": {
@@ -1709,7 +1779,9 @@
                 "ip": "175.16.199.1",
                 "port": 54693,
                 "user": {
-                    "email": "spedizioni@divella.it"
+                    "domain": "divella.it",
+                    "email": "spedizioni@divella.it",
+                    "name": "spedizioni"
                 }
             },
             "tags": [
@@ -1727,7 +1799,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "email": {
                 "from": {
@@ -1786,6 +1858,10 @@
                 "ip": [
                     "10.198.16.121",
                     "10.198.234.240"
+                ],
+                "user": [
+                    "pankhil",
+                    "pankhil@postman.local"
                 ]
             },
             "rule": {
@@ -1817,7 +1893,9 @@
                 "ip": "10.198.16.121",
                 "port": 56653,
                 "user": {
-                    "email": "pankhil@postman.local"
+                    "domain": "postman.local",
+                    "email": "pankhil@postman.local",
+                    "name": "pankhil"
                 }
             },
             "tags": [
@@ -1835,7 +1913,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "email": {
                 "from": {
@@ -1894,6 +1972,10 @@
                 "ip": [
                     "10.198.16.121",
                     "10.198.234.240"
+                ],
+                "user": [
+                    "pankhil",
+                    "pankhil@postman.local"
                 ]
             },
             "rule": {
@@ -1925,7 +2007,9 @@
                 "ip": "10.198.16.121",
                 "port": 56632,
                 "user": {
-                    "email": "pankhil@postman.local"
+                    "domain": "postman.local",
+                    "email": "pankhil@postman.local",
+                    "name": "pankhil"
                 }
             },
             "tags": [
@@ -1940,7 +2024,7 @@
                 "port": 21
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "Virus",
@@ -2030,7 +2114,7 @@
                 "port": 21
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "Allowed",
@@ -2126,7 +2210,7 @@
                 "port": 80
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "drop",
@@ -2221,7 +2305,7 @@
                 "port": 80
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "drop",
@@ -2327,7 +2411,7 @@
                 "port": 80
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "drop",
@@ -2433,7 +2517,7 @@
                 "port": 0
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "alert",
@@ -2523,7 +2607,7 @@
                 "port": 443
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "allowed",
@@ -2630,7 +2714,7 @@
                 "port": 80
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "denied",
@@ -2741,7 +2825,7 @@
                 "port": 5228
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "denied",
@@ -2849,7 +2933,7 @@
                 "port": 443
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "allowed",
@@ -2966,7 +3050,7 @@
                 "port": 443
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "denied",
@@ -3085,7 +3169,7 @@
                 "port": 80
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "allowed",
@@ -3197,7 +3281,7 @@
         {
             "@timestamp": "2016-12-02T18:50:20.000Z",
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "alert",
@@ -3280,7 +3364,7 @@
                 "port": 80
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "warned",
@@ -3388,7 +3472,7 @@
                 "port": 80
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "allowed",
@@ -3482,7 +3566,7 @@
         {
             "@timestamp": "2020-05-18T14:38:57.000+02:00",
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "category": [
@@ -3519,6 +3603,7 @@
                     "175.16.199.1"
                 ],
                 "user": [
+                    "elastic.user",
                     "elastic.user@elastic.test.com"
                 ]
             },
@@ -3552,17 +3637,21 @@
                 },
                 "ip": "175.16.199.1",
                 "user": {
+                    "domain": "elastic.test.com",
+                    "email": "elastic.user@elastic.test.com",
                     "group": {
                         "name": "Open Group"
                     },
-                    "name": "elastic.user@elastic.test.com"
+                    "name": "elastic.user"
                 }
             },
             "tags": [
                 "preserve_original_event"
             ],
             "user": {
-                "name": "elastic.user@elastic.test.com"
+                "domain": "elastic.test.com",
+                "email": "elastic.user@elastic.test.com",
+                "name": "elastic.user"
             }
         },
         {
@@ -3583,7 +3672,7 @@
                 "ip": "175.16.199.1"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "code": "18055",
@@ -3613,6 +3702,7 @@
                     "175.16.199.1"
                 ],
                 "user": [
+                    "elastic.user",
                     "elastic.user@elastic.test.com"
                 ]
             },
@@ -3648,7 +3738,9 @@
                 },
                 "ip": "175.16.199.1",
                 "user": {
-                    "name": "elastic.user@elastic.test.com"
+                    "domain": "elastic.test.com",
+                    "email": "elastic.user@elastic.test.com",
+                    "name": "elastic.user"
                 }
             },
             "tags": [
@@ -3658,7 +3750,7 @@
         {
             "@timestamp": "2020-05-18T14:38:59.000+02:00",
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "code": "18057",
@@ -3706,7 +3798,7 @@
         {
             "@timestamp": "2020-05-18T14:39:00.000+02:00",
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "category": [
@@ -3743,6 +3835,7 @@
                     "175.16.199.1"
                 ],
                 "user": [
+                    "elastic.user",
                     "elastic.user@elastic.test.com"
                 ]
             },
@@ -3775,20 +3868,24 @@
                 },
                 "ip": "175.16.199.1",
                 "user": {
-                    "name": "elastic.user@elastic.test.com"
+                    "domain": "elastic.test.com",
+                    "email": "elastic.user@elastic.test.com",
+                    "name": "elastic.user"
                 }
             },
             "tags": [
                 "preserve_original_event"
             ],
             "user": {
-                "name": "elastic.user@elastic.test.com"
+                "domain": "elastic.test.com",
+                "email": "elastic.user@elastic.test.com",
+                "name": "elastic.user"
             }
         },
         {
             "@timestamp": "2020-05-18T14:39:01.000+02:00",
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "category": [
@@ -3844,7 +3941,7 @@
         {
             "@timestamp": "2020-05-18T14:39:02.000+02:00",
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "code": "60022",
@@ -3893,7 +3990,7 @@
         {
             "@timestamp": "2020-05-18T14:39:03.000+02:00",
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "category": [
@@ -3930,6 +4027,7 @@
                     "175.16.199.1"
                 ],
                 "user": [
+                    "elastic.user",
                     "elastic.user@elastic.test.com"
                 ]
             },
@@ -3962,14 +4060,18 @@
                 },
                 "ip": "175.16.199.1",
                 "user": {
-                    "name": "elastic.user@elastic.test.com"
+                    "domain": "elastic.test.com",
+                    "email": "elastic.user@elastic.test.com",
+                    "name": "elastic.user"
                 }
             },
             "tags": [
                 "preserve_original_event"
             ],
             "user": {
-                "name": "elastic.user@elastic.test.com"
+                "domain": "elastic.test.com",
+                "email": "elastic.user@elastic.test.com",
+                "name": "elastic.user"
             }
         },
         {
@@ -3978,7 +4080,7 @@
                 "bytes": 0
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "code": "17824",
@@ -4005,6 +4107,7 @@
                     "testhost.local"
                 ],
                 "user": [
+                    "elastic.user",
                     "elastic.user@elastic.test.com"
                 ]
             },
@@ -4028,7 +4131,9 @@
             "source": {
                 "bytes": 0,
                 "user": {
-                    "name": "elastic.user@elastic.test.com"
+                    "domain": "elastic.test.com",
+                    "email": "elastic.user@elastic.test.com",
+                    "name": "elastic.user"
                 }
             },
             "tags": [
@@ -4038,7 +4143,7 @@
         {
             "@timestamp": "2020-05-18T14:39:05.000+02:00",
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "category": [
@@ -4118,7 +4223,7 @@
         {
             "@timestamp": "2020-05-18T14:39:06.000+02:00",
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "code": "18017",
@@ -4167,7 +4272,7 @@
         {
             "@timestamp": "2020-05-18T14:39:07.000+02:00",
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "code": "17502",
@@ -4227,7 +4332,7 @@
         {
             "@timestamp": "2020-05-18T14:39:08.000+02:00",
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "code": "17507",
@@ -4299,7 +4404,7 @@
         {
             "@timestamp": "2020-05-18T14:39:09.000+02:00",
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "code": "17818",
@@ -4348,7 +4453,7 @@
         {
             "@timestamp": "2020-05-18T14:39:10.000+02:00",
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "code": "17923",
@@ -4398,7 +4503,7 @@
                 "bytes": 0
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "category": [
@@ -4437,6 +4542,7 @@
                     "10.84.234.38"
                 ],
                 "user": [
+                    "elastic.user",
                     "elastic.user@elastic.test.com"
                 ]
             },
@@ -4459,17 +4565,21 @@
                 "bytes": 0,
                 "ip": "10.84.234.38",
                 "user": {
+                    "domain": "elastic.test.com",
+                    "email": "elastic.user@elastic.test.com",
                     "group": {
                         "name": "VPN.SSL.Users.elastic"
                     },
-                    "name": "elastic.user@elastic.test.com"
+                    "name": "elastic.user"
                 }
             },
             "tags": [
                 "preserve_original_event"
             ],
             "user": {
-                "name": "elastic.user@elastic.test.com"
+                "domain": "elastic.test.com",
+                "email": "elastic.user@elastic.test.com",
+                "name": "elastic.user"
             }
         },
         {
@@ -4478,7 +4588,7 @@
                 "bytes": 0
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "code": "18014",
@@ -4537,7 +4647,7 @@
                 "bytes": 31488
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "code": "18015",
@@ -4596,7 +4706,7 @@
                 "bytes": 0
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "code": "18016",
@@ -4655,7 +4765,7 @@
                 "bytes": 0
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "code": "18014",
@@ -4714,7 +4824,7 @@
                 "bytes": 31488
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "code": "18015",
@@ -4773,7 +4883,7 @@
                 "bytes": 0
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "code": "18016",
@@ -4829,7 +4939,7 @@
         {
             "@timestamp": "2018-06-06T11:12:10.000+05:30",
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "code": "17815",
@@ -4899,7 +5009,7 @@
                 "port": 80
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "allowed",
@@ -5044,7 +5154,7 @@
                 "port": 53
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "allowed",
@@ -5189,7 +5299,7 @@
                 "port": 4980
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "denied",
@@ -5308,7 +5418,7 @@
                 "port": 53
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "denied",
@@ -5366,6 +5476,7 @@
                     "192.168.0.1"
                 ],
                 "user": [
+                    "elastic",
                     "elastic@user.local"
                 ]
             },
@@ -5402,10 +5513,12 @@
                 "packets": 0,
                 "port": 60102,
                 "user": {
+                    "domain": "user.local",
+                    "email": "elastic@user.local",
                     "group": {
                         "name": "elastic.group.local"
                     },
-                    "name": "elastic@user.local"
+                    "name": "elastic"
                 }
             },
             "tags": [
@@ -5436,7 +5549,7 @@
                 "port": 18
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "denied",
@@ -5550,7 +5663,7 @@
                 "port": 1109
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "denied",
@@ -5608,6 +5721,7 @@
                     "192.168.5.11"
                 ],
                 "user": [
+                    "elastic",
                     "elastic@user.local"
                 ]
             },
@@ -5657,10 +5771,12 @@
                 "packets": 0,
                 "port": 51826,
                 "user": {
+                    "domain": "user.local",
+                    "email": "elastic@user.local",
                     "group": {
                         "name": "elastic.group.local"
                     },
-                    "name": "elastic@user.local"
+                    "name": "elastic"
                 }
             },
             "tags": [
@@ -5679,7 +5795,7 @@
                 "port": 64465
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "denied",
@@ -5795,7 +5911,7 @@
                 "port": 56267
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "denied",
@@ -5909,7 +6025,7 @@
                 "port": 443
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "allowed",
@@ -5971,6 +6087,7 @@
                     "175.16.199.1"
                 ],
                 "user": [
+                    "elastic",
                     "elastic@user.local"
                 ]
             },
@@ -6014,10 +6131,12 @@
                 "packets": 0,
                 "port": 58543,
                 "user": {
+                    "domain": "user.local",
+                    "email": "elastic@user.local",
                     "group": {
                         "name": "elastic.group.local"
                     },
-                    "name": "elastic@user.local"
+                    "name": "elastic"
                 }
             },
             "tags": [
@@ -6047,7 +6166,7 @@
                 "packets": 0
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "allowed",
@@ -6163,7 +6282,7 @@
                 "port": 88
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "allowed",
@@ -6303,7 +6422,7 @@
                 "port": 0
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "denied",
@@ -6399,7 +6518,7 @@
                 "port": 0
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "denied",
@@ -6494,7 +6613,7 @@
                 "port": 137
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "denied",
@@ -6596,7 +6715,7 @@
                 "port": 22
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "denied",
@@ -6698,7 +6817,7 @@
                 "packets": 0
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "denied",
@@ -6807,7 +6926,7 @@
                 "port": 80
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "denied",
@@ -6904,7 +7023,7 @@
                 "port": 547
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "denied",
@@ -7005,7 +7124,7 @@
                 "packets": 0
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "denied",
@@ -7120,7 +7239,7 @@
                 "packets": 0
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "denied",
@@ -7232,7 +7351,7 @@
                 "port": 80
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "drop",
@@ -7339,7 +7458,7 @@
                 "port": 53
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "drop",
@@ -7446,7 +7565,7 @@
                 "port": 80
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "drop",
@@ -7541,7 +7660,7 @@
                 "port": 25
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "detect",
@@ -7625,7 +7744,7 @@
                 "port": 25
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "drop",
@@ -7705,7 +7824,7 @@
         {
             "@timestamp": "2017-01-31T14:52:11.000+05:30",
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "Allowed",
@@ -7764,7 +7883,7 @@
         {
             "@timestamp": "2017-01-31T14:52:11.000+05:30",
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "Denied",
@@ -7815,6 +7934,7 @@
                     "10.198.47.112"
                 ],
                 "user": [
+                    "jsmith",
                     "jsmith@iview.com"
                 ]
             },
@@ -7834,7 +7954,9 @@
             "source": {
                 "ip": "10.198.47.112",
                 "user": {
-                    "name": "jsmith@iview.com"
+                    "domain": "iview.com",
+                    "email": "jsmith@iview.com",
+                    "name": "jsmith"
                 }
             },
             "tags": [
@@ -7844,7 +7966,7 @@
         {
             "@timestamp": "2017-01-31T15:28:25.000+05:30",
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "Allowed",
@@ -7906,7 +8028,7 @@
                 "ip": "10.198.241.50"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "Pending",
@@ -7992,7 +8114,7 @@
                 "ip": "10.198.241.50"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "Denied",
@@ -8079,7 +8201,7 @@
                 "domain": "sophostest.com"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "Denied",
@@ -8184,7 +8306,7 @@
                 "ip": "175.16.199.1"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "denied",
@@ -8290,7 +8412,7 @@
                 "ip": "175.16.199.1"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "denied",
@@ -8385,7 +8507,7 @@
                 "ip": "10.198.233.48"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "denied",
@@ -8476,7 +8598,7 @@
                 "ip": "10.198.233.48"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "denied",
@@ -8582,7 +8704,7 @@
                 "ip": "175.16.199.1"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "denied",
@@ -8672,7 +8794,7 @@
         {
             "@timestamp": "2017-02-01T14:17:35.000+05:30",
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "code": "18011",
@@ -8721,7 +8843,7 @@
         {
             "@timestamp": "2017-02-01T14:19:47.000+05:30",
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "code": "18011",
@@ -8796,7 +8918,7 @@
                 "port": 443
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "allowed",
@@ -8936,7 +9058,7 @@
                 "port": 443
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "allowed",
@@ -9056,7 +9178,7 @@
                 "port": 443
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "allowed",

@@ -41,7 +41,7 @@ An example event for `log` looks as following:
         "port": 8256
     },
     "ecs": {
-        "version": "8.11.0"
+        "version": "8.17.0"
     },
     "elastic_agent": {
         "id": "6a762ace-ff7a-4a1f-9fc4-cae4c2122d76",
@@ -165,6 +165,7 @@ An example event for `log` looks as following:
 | cisco.asa.mapped_source_port | The translated source port. | long |
 | cisco.asa.message | The message associated with SIP and Skinny VoIP events | keyword |
 | cisco.asa.message_id | The Cisco ASA message identifier. | keyword |
+| cisco.asa.message_repeats | The number of times the message has been repeated. | short |
 | cisco.asa.original_iana_number | IANA Protocol Number of the original IP payload. | short |
 | cisco.asa.peer_type | The peer type. | keyword |
 | cisco.asa.pool_address | The pool address. | ip |
@@ -354,6 +355,22 @@ An example event for `log` looks as following:
 | source.user.name | Short name or login of the user. | keyword |
 | source.user.name.text | Multi-field of `source.user.name`. | match_only_text |
 | tags | List of keywords used to tag each event. | keyword |
+| tls.client.x509.serial_number | Unique serial number issued by the certificate authority. For consistency, this should be encoded in base 16 and formatted without colons and uppercase characters. | keyword |
+| tls.client.x509.subject.common_name | List of common names (CN) of subject. | keyword |
+| tls.client.x509.subject.country | List of country \(C) code | keyword |
+| tls.client.x509.subject.distinguished_name | Distinguished name (DN) of the certificate subject entity. | keyword |
+| tls.client.x509.subject.locality | List of locality names (L) | keyword |
+| tls.client.x509.subject.organization | List of organizations (O) of subject. | keyword |
+| tls.client.x509.subject.organizational_unit | List of organizational units (OU) of subject. | keyword |
+| tls.client.x509.subject.state_or_province | List of state or province names (ST, S, or P) | keyword |
+| tls.server.x509.serial_number | Unique serial number issued by the certificate authority. For consistency, this should be encoded in base 16 and formatted without colons and uppercase characters. | keyword |
+| tls.server.x509.subject.common_name | List of common names (CN) of subject. | keyword |
+| tls.server.x509.subject.country | List of country \(C) code | keyword |
+| tls.server.x509.subject.distinguished_name | Distinguished name (DN) of the certificate subject entity. | keyword |
+| tls.server.x509.subject.locality | List of locality names (L) | keyword |
+| tls.server.x509.subject.organization | List of organizations (O) of subject. | keyword |
+| tls.server.x509.subject.organizational_unit | List of organizational units (OU) of subject. | keyword |
+| tls.server.x509.subject.state_or_province | List of state or province names (ST, S, or P) | keyword |
 | tls.version | Numeric part of the version parsed from the original string. | keyword |
 | tls.version_protocol | Normalized lowercase protocol name parsed from original string. | keyword |
 | url.domain | Domain of the url, such as "www.elastic.co". In some cases a URL may refer to an IP and/or port directly, without a domain name. In this case, the IP address would go to the `domain` field. If the URL contains a literal IPv6 address enclosed by `[` and `]` (IETF RFC 2732), the `[` and `]` characters should also be captured in the `domain` field. | keyword |
@@ -367,10 +384,10 @@ An example event for `log` looks as following:
 | url.path | Path of the request, such as "/search". | wildcard |
 | url.port | Port of the request, such as 443. | long |
 | url.query | The query field describes the query string of the request, such as "q=elasticsearch". The `?` is excluded from the query string. If a URL contains no `?`, there is no query field. If there is a `?` but no query, the query field exists with an empty string. The `exists` query can be used to differentiate between the two cases. | keyword |
-| url.registered_domain | The highest registered url domain, stripped of the subdomain. For example, the registered domain for "foo.example.com" is "example.com". This value can be determined precisely with a list like the public suffix list (http://publicsuffix.org). Trying to approximate this by simply taking the last two labels will not work well for TLDs such as "co.uk". | keyword |
+| url.registered_domain | The highest registered url domain, stripped of the subdomain. For example, the registered domain for "foo.example.com" is "example.com". This value can be determined precisely with a list like the public suffix list (https://publicsuffix.org). Trying to approximate this by simply taking the last two labels will not work well for TLDs such as "co.uk". | keyword |
 | url.scheme | Scheme of the request, such as "https". Note: The `:` is not part of the scheme. | keyword |
 | url.subdomain | The subdomain portion of a fully qualified domain name includes all of the names except the host name under the registered_domain.  In a partially qualified domain, or if the the qualification level of the full name cannot be determined, subdomain contains all of the names below the registered domain. For example the subdomain portion of "www.east.mydomain.co.uk" is "east". If the domain has multiple levels of subdomain, such as "sub2.sub1.example.com", the subdomain field should contain "sub2.sub1", with no trailing period. | keyword |
-| url.top_level_domain | The effective top level domain (eTLD), also known as the domain suffix, is the last part of the domain name. For example, the top level domain for example.com is "com". This value can be determined precisely with a list like the public suffix list (http://publicsuffix.org). Trying to approximate this by simply taking the last label will not work well for effective TLDs such as "co.uk". | keyword |
+| url.top_level_domain | The effective top level domain (eTLD), also known as the domain suffix, is the last part of the domain name. For example, the top level domain for example.com is "com". This value can be determined precisely with a list like the public suffix list (https://publicsuffix.org). Trying to approximate this by simply taking the last label will not work well for effective TLDs such as "co.uk". | keyword |
 | url.username | Username of the request. | keyword |
 | user.email | User email address. | keyword |
 | user.name | Short name or login of the user. | keyword |

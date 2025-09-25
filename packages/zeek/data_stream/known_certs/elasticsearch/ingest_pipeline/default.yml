@@ -18,7 +18,7 @@ processors:
       copy_from: "@timestamp"
   - set:
       field: ecs.version
-      value: '8.11.0'
+      value: '8.17.0'
   - set:
       field: event.kind
       value: event
@@ -132,11 +132,6 @@ processors:
   - remove:
       field:
         - json
-      ignore_missing: true
-  - remove:
-      field: event.original
-      if: "ctx.tags == null || !(ctx.tags.contains('preserve_original_event'))"
-      ignore_failure: true
       ignore_missing: true
 on_failure:
   - set:

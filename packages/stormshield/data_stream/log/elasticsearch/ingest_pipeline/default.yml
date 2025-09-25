@@ -3,7 +3,7 @@ description: Pipeline for processing sample logs
 processors:
   - set:
       field: ecs.version
-      value: '8.11.0'
+      value: '8.17.0'
   - set:
       copy_from: message
       field: event.original
@@ -497,12 +497,6 @@ processors:
       field: _temp_
       ignore_missing: true
       ignore_failure: true
-
-  - remove:
-      field: event.original
-      if: ctx.tags == null || !(ctx.tags.contains('preserve_original_event'))
-      ignore_failure: true
-      ignore_missing: true
 
 on_failure:
 - append:

@@ -1,9 +1,9 @@
 config_version: 2
 interval: {{interval}}
-{{#if enable_request_tracer}}
-request.tracer.filename: "../../logs/httpjson/http-request-trace-*.ndjson"
-request.tracer.maxbackups: 5
-{{/if}}
+request.tracer:
+  enabled: {{enable_request_tracer}}
+  filename: "../../logs/httpjson/http-request-trace-*.ndjson"
+  maxbackups: 5
 auth.oauth2.client.id: {{client_id}}
 auth.oauth2.client.secret: {{client_secret}}
 auth.oauth2.token_url: {{login_url}}/{{tenant_id}}/{{token_endpoint}}
@@ -40,10 +40,12 @@ response.pagination:
       target: url.params.$filter
       value: '[[.last_response.url.params.Get "$filter"]]'
       fail_on_template_error: true
+      do_not_log_failure: true
   - set:
       target: url.params.$skip
       value: '[[if (eq (len .last_response.body.value) {{batch_size}})]][[add (toInt (.last_response.url.params.Get "$skip")) {{batch_size}}]][[end]]'
       fail_on_template_error: true
+      do_not_log_failure: true
 response.split:
   target: body.value
   ignore_empty_value: true

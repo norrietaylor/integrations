@@ -3,7 +3,7 @@ description: Pipeline for Fortinet FortiManager.
 processors:
   - set:
       field: ecs.version
-      value: 8.11.0
+      value: 8.17.0
   - set:
       field: event.kind
       value: event
@@ -1411,10 +1411,6 @@ processors:
         - temp
         - _temp
         - syslog5424_sd
-      ignore_missing: true
-  - remove:
-      field: event.original
-      if: ctx.tags == null || !(ctx.tags.contains('preserve_original_event'))
       ignore_missing: true
   - remove:
       if: ctx.tags == null || !(ctx.tags.contains('preserve_duplicate_custom_fields'))

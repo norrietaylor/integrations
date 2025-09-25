@@ -3,7 +3,7 @@ description: Pipeline for Fortinet FortiEDR Endpoint Detection and Response
 processors:
   - set:
       field: ecs.version
-      value: '8.11.0'
+      value: '8.17.0'
   - set:
       field: observer.vendor
       value: Fortinet
@@ -222,11 +222,6 @@ processors:
       field: event.end
       copy_from: fortinet.edr.last_seen
       if: ctx.fortinet?.edr?.last_seen != null
-  - remove:
-      field: event.original
-      if: "ctx?.tags == null || !(ctx.tags.contains('preserve_original_event'))"
-      ignore_failure: true
-      ignore_missing: true
   - remove:
       field:
         - _temp_

@@ -8,7 +8,15 @@ For example, to detect possible brute force sign-in attacks, you can install the
 
 You may also want to plan your Azure capacity better. Send Azure Activity logs to Elastic to track and visualize when your virtual machines fail to start because they exceed the quota limit.
 
-## What's new in v2 preview?
+## What's new in the integration v2 preview?
+
+The Azure Logs integration v2 preview introduces:
+
+* A new architecture that allows you to collect all logs through a single event hub.
+* Significant efficiency improvements.
+* A new event hub processor (v2) that incorporates the latest Event Hubs SDK.
+
+### Architecture
 
 The Azure Logs integration (v2 preview) introduces a new architecture that allows you to forward logs from multiple Azure services to the same event hub.
 
@@ -31,9 +39,48 @@ The Azure Logs integration (v2 preview) introduces a new architecture that allow
 
 The integration will automatically detect the log category and forward the logs to the appropriate data stream. When the integration v2 preview cannot find a matching data stream for a log category, it forwards the logs to the platform logs data stream.
 
-IMPORTANT: To use the v2 preview, you must turn off all the existing v1 integrations and turn on only the v2 preview integration.
+IMPORTANT: **To use the integration v2 preview, you must turn off all the existing v1 integrations and turn on only the v2 preview integration.**
 
-Under the hood, the v2 preview uses only one `azure-eventhub` input per event hub. The v2 preview avoids contention and inefficiencies from using multiple inputs with the same event hub, which is typical of the v1 architecture. With the v2 preview, you can still assign the agent policy to multiple Elastic Agents to scale out the logs processing.
+### Efficiency
+
+The integration v2 preview avoids contention and inefficiencies from using multiple consumers per partition with the same event hub, problems that are typical of the v1 architecture. With the v2 preview, you can still assign the agent policy to multiple Elastic Agents to scale out the logs processing.
+
+### Event Hub Processor v2 ✨
+
+The integration v2 preview offers a new processor v2 starting with integration version 1.23.0.
+
+The processor v2 introduces several changes:
+
+* It uses the latest Event Hubs SDK from Azure.
+* It uses a more efficient checkpoint store based on Azure Blob Storage metadata.
+
+The processor v2 is in preview. Processor v1 is still the default and is recommended for typical use cases.
+
+See the "Event Hub Processor v2 only" section in the integration settings for more details about enabling the processor v2.
+
+### FAQ
+
+Here are a few frequently asked questions about the integration v2 preview.
+
+#### Question: Is the integration v2 production ready?
+
+Yes, the integration v2 is production ready.
+
+The integration v2 is marked with "preview" as we were testing this routing approach, and wanted to keep the option of changing course, if needed. Since the experiment was successful, we'll remove the "preview" from the name as we finalize the plans to transition from v1 to v2.
+
+#### Question: Are all logs routed to the relevant data streams?
+
+Yes, all known logs are routed to the data stream with the best parsing and mapping functionality available.
+
+The `logs-azure.events-default` contains the routing logic based on the `category` field. The routing rules are available in the integrations repo at [packages/azure/data_stream/events/routing_rules.yml](https://github.com/elastic/integrations/blob/main/packages/azure/data_stream/events/routing_rules.yml).
+
+#### Question: How are unsupported Azure logs handled?
+
+The integration v2 inspects the category field to see if there's an integration available with full support. If there isn't a specific integration available, the routing falls back to `logs-azure.platformlogs-default` to apply the standard parsing and mapping.
+
+#### Question: What is in the undocumented data-stream `logs-azure.events-default`?
+
+The `logs-azure.events-default` data stream is the logs entry point for the integration v2. It contains the core logs routing logic.
 
 ## Data streams
 
@@ -41,6 +88,29 @@ The Azure Logs integration (v2 preview) collects logs.
 
 **Logs** help you keep a record of events that happen on your Azure account.
 Log data streams collected by the Azure Logs integration include Activity, Platform, Microsoft Entra ID (Sign-in, Audit, Identity Protection, Provisioning), Microsoft Graph Activity, and Spring Apps logs.
+
+## Routing
+
+The integration routes the logs to the most appropriate data stream based on the log category. 
+
+Use the following table to identify the target data streams for each log category. For example, if the integration receives a log event with the `NonInteractiveUserSignInLogs` category, it will infer `azure.signinlogs` as dataset, indexing the log into `logs-azure.signinlogs-default` data stream. 
+
+| Data Stream                        | Log Categories                                                                                                                                               |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `logs-azure.activitylogs-*`        | `Administrative`, `Security`, `ServiceHealth`, `Alert`, `Recommendation`, `Policy`, `Autoscale`, `ResourceHealth`                                            |
+| `logs-azure.application_gateway-*` | `ApplicationGatewayFirewallLog`, `ApplicationGatewayAccessLog`                                                                                               |
+| `logs-azure.auditlogs-*`           | `AuditLogs`                                                                                                                                                  |
+| `logs-azure.firewall_logs-*`       | `AzureFirewallApplicationRule`, `AzureFirewallNetworkRule`, `AzureFirewallDnsProxy`, `AZFWApplicationRule`, `AZFWNetworkRule`, `AZFWNatRule`, `AZFWDnsQuery` |
+| `logs-azure.graphactivitylog-*`    | `MicrosoftGraphActivityLogs`                                                                                                                                 |
+| `logs-azure.identity_protection-*` | `RiskyUsers`, `UserRiskEvents`                                                                                                                               |
+| `logs-azure.provisioning-*`        | `ProvisioningLogs`                                                                                                                                           |
+| `logs-azure.signinlogs-*`          | `SignInLogs`, `NonInteractiveUserSignInLogs`, `ServicePrincipalSignInLogs`, `ManagedIdentitySignInLogs`                                                      |
+| `logs-azure.springcloudlogs-*`     | `ApplicationConsole`, `SystemLogs`, `IngressLogs`, `BuildLogs`, `ContainerEventLogs`                                                                         |
+| `logs-azure.platformlogs-*`        | All other log categories                                                                                                                                     |
+
+### What about all other log categories?
+
+The integration indexes all other Azure logs categories using the `logs-azure.platformlogs-*` data stream.
 
 ## Requirements
 
@@ -479,6 +549,49 @@ Examples:
 * Azure USGovernmentCloud: `https://management.usgovcloudapi.net/`
 
 This setting can also be used to define your own endpoints, like for hybrid cloud models.
+
+### Event Hub Processor v2 only
+
+The following settings are **event hub processor v2 only** and available in the advanced section of the integration.
+
+`processor_version` :
+_string_
+(processor v2 only) The processor version that the integration should use. Possible values are `v1` and `v2` (preview). The processor v2 is in preview. Using the processor v1 is recommended for typical use cases. Default is `v1`.
+
+`processor_update_interval` :
+_string_
+(processor v2 only) How often the processor should attempt to claim partitions. Default is `10s`.
+
+`processor_start_position` :
+_string_
+(processor v2 only) Controls from which position in the event hub the processor should start processing messages for all partitions.
+
+Possible values are `earliest` and `latest`.
+
+* `earliest` (default): starts processing messages from the last checkpoint, or the beginning of the event hub if no checkpoint is available.
+* `latest`: starts processing messages from the the latest event in the event hub and continues to process new events as they arrive.
+
+`migrate_checkpoint` :
+_boolean_
+(processor v2 only) Flag to control whether the processor should perform the checkpoint information migration from v1 to v2 at startup. The checkpoint migration converts the checkpoint information from the v1 format to the v2 format.
+
+Default is `false`, which means the processor will not perform the checkpoint migration.
+
+`endpoint_suffix` :
+_string_
+Override the default endpoint suffix used to construct the connection string. Default is set to `core.windows.net`. For example, US Government Cloud users should set this to `core.usgovcloudapi.net`.
+
+`partition_receive_timeout` :
+_string_
+(processor v2 only) Maximum time to wait before processing the messages received from the event hub.
+
+The partition consumer waits up to a "receive count" or a "receive timeout", whichever comes first. Default is `5` seconds.
+
+`partition_receive_count` :
+_string_
+(processor v2 only) Maximum number of messages from the event hub to wait for before processing them.
+
+The partition consumer waits up to a "receive count" or a "receive timeout", whichever comes first. Default is `100` messages.
 
 ## Handling Malformed JSON in Azure Logs
 

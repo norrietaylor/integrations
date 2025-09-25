@@ -1,24 +1,24 @@
 {
-    "@timestamp": "2024-10-29T15:33:09.283Z",
+    "@timestamp": "2025-09-18T02:21:21.700Z",
     "agent": {
-        "ephemeral_id": "671ffaef-2f9c-40c3-bc44-8f7dd8f41bf3",
-        "id": "fffef289-536c-44b3-8a3a-7edce9a79be4",
-        "name": "elastic-agent-79065",
+        "ephemeral_id": "27e2f226-8bea-4235-b83c-c7919dfa8f8c",
+        "id": "cc46dccd-0ce0-4fb8-9f12-7c7427af9273",
+        "name": "elastic-agent-80088",
         "type": "filebeat",
-        "version": "8.14.3"
+        "version": "8.19.3"
     },
     "data_stream": {
         "dataset": "jamf_protect.alerts",
-        "namespace": "64311",
+        "namespace": "43213",
         "type": "logs"
     },
     "ecs": {
-        "version": "8.11.0"
+        "version": "8.17.0"
     },
     "elastic_agent": {
-        "id": "fffef289-536c-44b3-8a3a-7edce9a79be4",
+        "id": "cc46dccd-0ce0-4fb8-9f12-7c7427af9273",
         "snapshot": false,
-        "version": "8.14.3"
+        "version": "8.19.3"
     },
     "event": {
         "action": "CustomURLHandlerCreation",
@@ -29,7 +29,7 @@
         ],
         "dataset": "jamf_protect.alerts",
         "id": "6bdb0697-6d07-47bc-a37d-6c3348a5d953",
-        "ingested": "2024-10-29T15:33:10Z",
+        "ingested": "2025-09-18T02:21:22Z",
         "kind": "alert",
         "provider": "Jamf Protect",
         "reason": "Application that uses custom url handler created",
@@ -144,6 +144,8 @@
         "name": "CustomURLHandlerCreation"
     },
     "tags": [
-        "Visibility"
+        "jamf_protect-alerts",
+        "Visibility",
+        "forwarded"
     ]
 }

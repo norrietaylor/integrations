@@ -12,31 +12,13 @@ The Imperva integration collects one type of data: securesphere.
 
 ## Requirements
 
-Elastic Agent must be installed. For more information, refer to the link [here](https://www.elastic.co/guide/en/fleet/current/elastic-agent-installation.html).
-
-### Installing and managing an Elastic Agent:
-
-You have a few options for installing and managing an Elastic Agent:
-
-### Install a Fleet-managed Elastic Agent (recommended):
-
-With this approach, you install Elastic Agent and use Fleet in Kibana to define, configure, and manage your agents in a central location. We recommend using fleet management because it makes the management and upgrade of your agents considerably easier.
-
-### Install Elastic Agent in standalone mode (advanced users):
-
-With this approach, you install Elastic Agent and manually configure the agent locally on the system where it’s installed. You are responsible for managing and upgrading the agents. This approach is reserved for advanced users only.
-
-### Install Elastic Agent in a containerized environment:
-
-You can run Elastic Agent inside a container, either with Fleet Server or standalone. Docker images for all versions of Elastic Agent are available from the Elastic Docker registry, and we provide deployment manifests for running on Kubernetes.
-
-There are some minimum requirements for running Elastic Agent, and for more information, refer to the link [here](https://www.elastic.co/guide/en/fleet/current/elastic-agent-installation.html).
+Elastic Agent must be installed. For more details, check the Elastic Agent [installation instructions](docs-content://reference/fleet/install-elastic-agents.md).
 
 The minimum **kibana.version** required is **8.10.1**.
 
 ## Setup
 
-### To collect data from Imperva, follow the required steps:
+### Collect data from Imperva
 
 1. The gateway and management server (MX) should have the relevant connectivity for sending logs using the Syslog server.
 
@@ -68,16 +50,16 @@ The minimum **kibana.version** required is **8.10.1**.
 - Create system events policy.
 - Assign a followed action to a system event policy.
 
-For more information on working with action sets and followed actions, refer to the Imperva relevant [documentation]( https://docs.imperva.com/bundle/v15.0-waf-management-server-manager-user-guide/page/Working_with_Action_Sets_and_Followed_Actions.htm).
+For more information on working with action sets and followed actions, check the Imperva [documentation](https://docs.imperva.com/bundle/v15.0-waf-management-server-manager-user-guide/page/Working_with_Action_Sets_and_Followed_Actions.htm).
 
-### Enabling the integration in Elastic:
+### Enable the integration in Elastic
 
-1. In Kibana, go to Management > Integrations
-2. In the "Search for integrations" search bar, type Imperva.
-3. Click on the "Imperva" integration from the search results.
-4. Click on the "Add Imperva" button to add the integration.
-5. Enable the data collection mode from the following: Filestream, TCP, or UDP.
-6. Add all the required configuration parameters, such as paths for the filestream or listen address and listen port for the TCP and UDP.
+1. In Kibana navigate to **Management** > **Integrations**.
+2. In the search bar, type **Imperva**.
+3. Select the **Imperva** integration and add it.
+4. Enable the data collection mode from the following: Filestream, TCP, or UDP.
+5. Add all the required configuration parameters, such as paths for the filestream or listen address and listen port for the TCP and UDP.
+6. Save the integration.
 
 ## Logs Reference
 
@@ -105,7 +87,7 @@ An example event for `securesphere` looks as following:
         "type": "logs"
     },
     "ecs": {
-        "version": "8.11.0"
+        "version": "8.17.0"
     },
     "elastic_agent": {
         "id": "0412638f-dd94-4c0e-b349-e99a0886d9f0",
@@ -118,7 +100,7 @@ An example event for `securesphere` looks as following:
         "dataset": "imperva.securesphere",
         "ingested": "2023-12-01T09:10:18Z",
         "kind": "event",
-        "original": "\u003c14\u003eCEF:0|Imperva Inc.|SecureSphere|15.1.0|User logged in|User admin logged in from 81.2.69.142.|High|suser=admin rt=Oct 05 2023 18:33:02 cat=SystemEvent",
+        "original": "<14>CEF:0|Imperva Inc.|SecureSphere|15.1.0|User logged in|User admin logged in from 81.2.69.142.|High|suser=admin rt=Oct 05 2023 18:33:02 cat=SystemEvent",
         "severity": 7
     },
     "imperva": {
@@ -190,14 +172,46 @@ An example event for `securesphere` looks as following:
 | imperva.securesphere.device.action |  | keyword |
 | imperva.securesphere.device.custom_string1.label |  | keyword |
 | imperva.securesphere.device.custom_string1.value |  | keyword |
+| imperva.securesphere.device.custom_string10.label |  | keyword |
+| imperva.securesphere.device.custom_string10.value |  | keyword |
+| imperva.securesphere.device.custom_string11.label |  | keyword |
+| imperva.securesphere.device.custom_string11.value |  | keyword |
+| imperva.securesphere.device.custom_string12.label |  | keyword |
+| imperva.securesphere.device.custom_string12.value |  | keyword |
+| imperva.securesphere.device.custom_string13.label |  | keyword |
+| imperva.securesphere.device.custom_string13.value |  | keyword |
+| imperva.securesphere.device.custom_string14.label |  | keyword |
+| imperva.securesphere.device.custom_string14.value |  | keyword |
+| imperva.securesphere.device.custom_string15.label |  | keyword |
+| imperva.securesphere.device.custom_string15.value |  | keyword |
+| imperva.securesphere.device.custom_string16.label |  | keyword |
+| imperva.securesphere.device.custom_string16.value |  | keyword |
+| imperva.securesphere.device.custom_string17.label |  | keyword |
+| imperva.securesphere.device.custom_string17.value |  | keyword |
+| imperva.securesphere.device.custom_string18.label |  | keyword |
+| imperva.securesphere.device.custom_string18.value |  | keyword |
+| imperva.securesphere.device.custom_string19.label |  | keyword |
+| imperva.securesphere.device.custom_string19.value |  | keyword |
 | imperva.securesphere.device.custom_string2.label |  | keyword |
 | imperva.securesphere.device.custom_string2.value |  | keyword |
+| imperva.securesphere.device.custom_string20.label |  | keyword |
+| imperva.securesphere.device.custom_string20.value |  | keyword |
+| imperva.securesphere.device.custom_string21.label |  | keyword |
+| imperva.securesphere.device.custom_string21.value |  | keyword |
 | imperva.securesphere.device.custom_string3.label |  | keyword |
 | imperva.securesphere.device.custom_string3.value |  | keyword |
 | imperva.securesphere.device.custom_string4.label |  | keyword |
 | imperva.securesphere.device.custom_string4.value |  | keyword |
 | imperva.securesphere.device.custom_string5.label |  | keyword |
 | imperva.securesphere.device.custom_string5.value |  | keyword |
+| imperva.securesphere.device.custom_string6.label |  | keyword |
+| imperva.securesphere.device.custom_string6.value |  | keyword |
+| imperva.securesphere.device.custom_string7.label |  | keyword |
+| imperva.securesphere.device.custom_string7.value |  | keyword |
+| imperva.securesphere.device.custom_string8.label |  | keyword |
+| imperva.securesphere.device.custom_string8.value |  | keyword |
+| imperva.securesphere.device.custom_string9.label |  | keyword |
+| imperva.securesphere.device.custom_string9.value |  | keyword |
 | imperva.securesphere.device.event.category |  | keyword |
 | imperva.securesphere.device.event.class_id |  | keyword |
 | imperva.securesphere.device.product |  | keyword |

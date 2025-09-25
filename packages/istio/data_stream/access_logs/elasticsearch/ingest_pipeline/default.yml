@@ -13,9 +13,16 @@ processors:
       ignore_failure: true
   - rename:
       field: message
+      tag: rename_message_to_event_original
       target_field: event.original
       ignore_missing: true
       if: 'ctx.event?.original == null'
+  - remove:
+      field: message
+      tag: remove_message
+      ignore_missing: true
+      description: The `message` field is no longer required if the document has an `event.original` field.
+      if: ctx.event?.original != null
   - drop:
       if: "ctx?.event?.original == null"
   - grok:
@@ -234,11 +241,6 @@ processors:
       if: ctx?.http?.response?.status_code != null && ctx.http.response.status_code >= 400
   - community_id:
       if: "ctx?.source?.ip != null && ctx?.source?.port != null && ctx?.destination?.ip != null && ctx?.destination?.port != null"
-  - remove:
-      field: event.original
-      if: ctx?.tags == null || !(ctx.tags.contains('preserve_original_event'))
-      ignore_failure: true
-      ignore_missing: true
 on_failure:
   - set:
       field: error.message

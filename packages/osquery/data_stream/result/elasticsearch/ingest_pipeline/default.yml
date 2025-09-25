@@ -6,7 +6,7 @@ processors:
       target_field: "json"
   - set:
       field: ecs.version
-      value: '8.11.0'
+      value: '8.17.0'
   - rename:
       field: message
       target_field: event.original
@@ -66,7 +66,7 @@ processors:
       value: event
   - set:
       field: event.type
-      value: info
+      value: [info]
   - set:
       field: event.action
       value: "{{{osquery.result.action}}}"
@@ -165,11 +165,6 @@ processors:
   - convert:
       field: file.size
       type: long
-      ignore_missing: true
-  - remove:
-      field: event.original
-      if: "ctx?.tags == null || !(ctx.tags.contains('preserve_original_event'))"
-      ignore_failure: true
       ignore_missing: true
 on_failure:
   - set:

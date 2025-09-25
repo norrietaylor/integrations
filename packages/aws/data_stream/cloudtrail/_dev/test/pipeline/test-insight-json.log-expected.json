@@ -60,6 +60,9 @@
                 }
             },
             "cloud": {
+                "account": {
+                    "id": "123456789012"
+                },
                 "region": "us-east-1"
             },
             "ecs": {
@@ -75,11 +78,9 @@
                     "info"
                 ]
             },
-            "related": {
-                "entity": []
-            },
             "tags": [
-                "preserve_original_event"
+                "preserve_original_event",
+                "actor_target_mapping"
             ]
         }
     ]

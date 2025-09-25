@@ -68,7 +68,7 @@
                 "response_code": "NOERROR"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "connection-finished",
@@ -108,13 +108,15 @@
                 "egress": {
                     "interface": {
                         "name": "outside"
-                    }
+                    },
+                    "zone": "output-zone"
                 },
                 "hostname": "siem-ftd",
                 "ingress": {
                     "interface": {
                         "name": "inside"
-                    }
+                    },
+                    "zone": "input-zone"
                 },
                 "product": "ftd",
                 "type": "idps",
@@ -216,7 +218,7 @@
                 "response_code": "NOERROR"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "connection-finished",
@@ -256,13 +258,15 @@
                 "egress": {
                     "interface": {
                         "name": "outside"
-                    }
+                    },
+                    "zone": "output-zone"
                 },
                 "hostname": "siem-ftd",
                 "ingress": {
                     "interface": {
                         "name": "inside"
-                    }
+                    },
+                    "zone": "input-zone"
                 },
                 "product": "ftd",
                 "type": "idps",
@@ -360,7 +364,7 @@
                 "response_code": "NOERROR"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "connection-finished",
@@ -400,13 +404,15 @@
                 "egress": {
                     "interface": {
                         "name": "outside"
-                    }
+                    },
+                    "zone": "output-zone"
                 },
                 "hostname": "siem-ftd",
                 "ingress": {
                     "interface": {
                         "name": "inside"
-                    }
+                    },
+                    "zone": "input-zone"
                 },
                 "product": "ftd",
                 "type": "idps",
@@ -509,7 +515,7 @@
                 "response_code": "NOERROR"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "connection-finished",
@@ -549,13 +555,15 @@
                 "egress": {
                     "interface": {
                         "name": "outside"
-                    }
+                    },
+                    "zone": "output-zone"
                 },
                 "hostname": "siem-ftd",
                 "ingress": {
                     "interface": {
                         "name": "inside"
-                    }
+                    },
+                    "zone": "input-zone"
                 },
                 "product": "ftd",
                 "type": "idps",
@@ -654,7 +662,7 @@
                 "response_code": "NOERROR"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "connection-finished",
@@ -694,13 +702,15 @@
                 "egress": {
                     "interface": {
                         "name": "outside"
-                    }
+                    },
+                    "zone": "output-zone"
                 },
                 "hostname": "siem-ftd",
                 "ingress": {
                     "interface": {
                         "name": "inside"
-                    }
+                    },
+                    "zone": "input-zone"
                 },
                 "product": "ftd",
                 "type": "idps",
@@ -798,7 +808,7 @@
                 "response_code": "NOERROR"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "connection-finished",
@@ -838,13 +848,15 @@
                 "egress": {
                     "interface": {
                         "name": "outside"
-                    }
+                    },
+                    "zone": "output-zone"
                 },
                 "hostname": "siem-ftd",
                 "ingress": {
                     "interface": {
                         "name": "inside"
-                    }
+                    },
+                    "zone": "input-zone"
                 },
                 "product": "ftd",
                 "type": "idps",
@@ -947,7 +959,7 @@
                 "response_code": "NXDOMAIN"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "connection-finished",
@@ -987,13 +999,15 @@
                 "egress": {
                     "interface": {
                         "name": "outside"
-                    }
+                    },
+                    "zone": "output-zone"
                 },
                 "hostname": "siem-ftd",
                 "ingress": {
                     "interface": {
                         "name": "inside"
-                    }
+                    },
+                    "zone": "input-zone"
                 },
                 "product": "ftd",
                 "type": "idps",
@@ -1091,7 +1105,7 @@
                 "response_code": "NOERROR"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "connection-finished",
@@ -1131,13 +1145,15 @@
                 "egress": {
                     "interface": {
                         "name": "outside"
-                    }
+                    },
+                    "zone": "output-zone"
                 },
                 "hostname": "siem-ftd",
                 "ingress": {
                     "interface": {
                         "name": "inside"
-                    }
+                    },
+                    "zone": "input-zone"
                 },
                 "product": "ftd",
                 "type": "idps",
@@ -1236,7 +1252,7 @@
                 "response_code": "SERVFAIL"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "connection-finished",
@@ -1276,13 +1292,15 @@
                 "egress": {
                     "interface": {
                         "name": "outside"
-                    }
+                    },
+                    "zone": "output-zone"
                 },
                 "hostname": "siem-ftd",
                 "ingress": {
                     "interface": {
                         "name": "inside"
-                    }
+                    },
+                    "zone": "input-zone"
                 },
                 "product": "ftd",
                 "type": "idps",
@@ -1384,7 +1402,7 @@
                 "response_code": "NOERROR"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "connection-finished",
@@ -1424,13 +1442,15 @@
                 "egress": {
                     "interface": {
                         "name": "outside"
-                    }
+                    },
+                    "zone": "output-zone"
                 },
                 "hostname": "siem-ftd",
                 "ingress": {
                     "interface": {
                         "name": "inside"
-                    }
+                    },
+                    "zone": "input-zone"
                 },
                 "product": "ftd",
                 "type": "idps",
@@ -1528,7 +1548,7 @@
                 "response_code": "REFUSED"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "connection-finished",
@@ -1568,13 +1588,15 @@
                 "egress": {
                     "interface": {
                         "name": "outside"
-                    }
+                    },
+                    "zone": "output-zone"
                 },
                 "hostname": "siem-ftd",
                 "ingress": {
                     "interface": {
                         "name": "inside"
-                    }
+                    },
+                    "zone": "input-zone"
                 },
                 "product": "ftd",
                 "type": "idps",
@@ -1664,7 +1686,7 @@
                 "response_code": "SERVFAIL"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "connection-finished",
@@ -1704,13 +1726,15 @@
                 "egress": {
                     "interface": {
                         "name": "outside"
-                    }
+                    },
+                    "zone": "output-zone"
                 },
                 "hostname": "siem-ftd",
                 "ingress": {
                     "interface": {
                         "name": "inside"
-                    }
+                    },
+                    "zone": "input-zone"
                 },
                 "product": "ftd",
                 "type": "idps",
@@ -1810,7 +1834,7 @@
                 "response_code": "NXDOMAIN"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "connection-finished",
@@ -1850,13 +1874,15 @@
                 "egress": {
                     "interface": {
                         "name": "outside"
-                    }
+                    },
+                    "zone": "output-zone"
                 },
                 "hostname": "siem-ftd",
                 "ingress": {
                     "interface": {
                         "name": "inside"
-                    }
+                    },
+                    "zone": "input-zone"
                 },
                 "product": "ftd",
                 "type": "idps",
@@ -1955,7 +1981,7 @@
                 "response_code": "NOERROR"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "connection-finished",
@@ -1995,13 +2021,15 @@
                 "egress": {
                     "interface": {
                         "name": "outside"
-                    }
+                    },
+                    "zone": "output-zone"
                 },
                 "hostname": "siem-ftd",
                 "ingress": {
                     "interface": {
                         "name": "inside"
-                    }
+                    },
+                    "zone": "input-zone"
                 },
                 "product": "ftd",
                 "type": "idps",
@@ -2101,7 +2129,7 @@
                 "response_code": "NXDOMAIN"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "connection-finished",
@@ -2141,13 +2169,15 @@
                 "egress": {
                     "interface": {
                         "name": "outside"
-                    }
+                    },
+                    "zone": "output-zone"
                 },
                 "hostname": "siem-ftd",
                 "ingress": {
                     "interface": {
                         "name": "inside"
-                    }
+                    },
+                    "zone": "input-zone"
                 },
                 "product": "ftd",
                 "type": "idps",
@@ -2249,7 +2279,7 @@
                 "response_code": "NOERROR"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "connection-finished",
@@ -2289,13 +2319,15 @@
                 "egress": {
                     "interface": {
                         "name": "outside"
-                    }
+                    },
+                    "zone": "output-zone"
                 },
                 "hostname": "siem-ftd",
                 "ingress": {
                     "interface": {
                         "name": "inside"
-                    }
+                    },
+                    "zone": "input-zone"
                 },
                 "product": "ftd",
                 "type": "idps",
@@ -2393,7 +2425,7 @@
                 "response_code": "NOERROR"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "connection-finished",
@@ -2433,13 +2465,15 @@
                 "egress": {
                     "interface": {
                         "name": "outside"
-                    }
+                    },
+                    "zone": "output-zone"
                 },
                 "hostname": "siem-ftd",
                 "ingress": {
                     "interface": {
                         "name": "inside"
-                    }
+                    },
+                    "zone": "input-zone"
                 },
                 "product": "ftd",
                 "type": "idps",
@@ -2537,7 +2571,7 @@
                 "response_code": "NOERROR"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "connection-finished",
@@ -2577,13 +2611,15 @@
                 "egress": {
                     "interface": {
                         "name": "outside"
-                    }
+                    },
+                    "zone": "output-zone"
                 },
                 "hostname": "siem-ftd",
                 "ingress": {
                     "interface": {
                         "name": "inside"
-                    }
+                    },
+                    "zone": "input-zone"
                 },
                 "product": "ftd",
                 "type": "idps",
@@ -2681,7 +2717,7 @@
                 "response_code": "NOERROR"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "connection-finished",
@@ -2721,13 +2757,15 @@
                 "egress": {
                     "interface": {
                         "name": "outside"
-                    }
+                    },
+                    "zone": "output-zone"
                 },
                 "hostname": "siem-ftd",
                 "ingress": {
                     "interface": {
                         "name": "inside"
-                    }
+                    },
+                    "zone": "input-zone"
                 },
                 "product": "ftd",
                 "type": "idps",
@@ -2821,7 +2859,7 @@
                 "response_code": "NOERROR"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "connection-finished",
@@ -2861,13 +2899,15 @@
                 "egress": {
                     "interface": {
                         "name": "outside"
-                    }
+                    },
+                    "zone": "output-zone"
                 },
                 "hostname": "siem-ftd",
                 "ingress": {
                     "interface": {
                         "name": "inside"
-                    }
+                    },
+                    "zone": "input-zone"
                 },
                 "product": "ftd",
                 "type": "idps",
@@ -2969,7 +3009,7 @@
                 "response_code": "NOERROR"
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "connection-finished",
@@ -3009,13 +3049,15 @@
                 "egress": {
                     "interface": {
                         "name": "outside"
-                    }
+                    },
+                    "zone": "output-zone"
                 },
                 "hostname": "siem-ftd",
                 "ingress": {
                     "interface": {
                         "name": "inside"
-                    }
+                    },
+                    "zone": "input-zone"
                 },
                 "product": "ftd",
                 "type": "idps",

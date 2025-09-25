@@ -45,7 +45,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "guest",
@@ -135,7 +135,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "action": "guest",
@@ -186,7 +186,7 @@
             }
         },
         {
-            "@timestamp": "2024-03-28T11:46:05.000Z",
+            "@timestamp": "2025-03-28T11:46:05.000Z",
             "cisco_ise": {
                 "log": {
                     "authentication": {
@@ -217,7 +217,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "category": [
@@ -248,7 +248,7 @@
             ]
         },
         {
-            "@timestamp": "2024-03-28T15:59:33.000Z",
+            "@timestamp": "2025-03-28T15:59:33.000Z",
             "cisco_ise": {
                 "log": {
                     "category": {
@@ -267,7 +267,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "category": [
@@ -298,7 +298,7 @@
             ]
         },
         {
-            "@timestamp": "2024-03-28T16:00:31.000Z",
+            "@timestamp": "2025-03-28T16:00:31.000Z",
             "cisco_ise": {
                 "log": {
                     "category": {
@@ -320,7 +320,7 @@
                 }
             },
             "ecs": {
-                "version": "8.11.0"
+                "version": "8.17.0"
             },
             "event": {
                 "category": [
@@ -341,6 +341,106 @@
                 }
             },
             "message": "PortalName=Hotspot Guest Portal (default), FailureReason=86023 Device Registration Web Authentication AUP Declined,",
+            "related": {
+                "hosts": [
+                    "cisco-ise-host"
+                ]
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "@timestamp": "2025-11-17T16:00:00.529Z",
+            "cisco_ise": {
+                "log": {
+                    "category": {
+                        "name": "CISE_Guest"
+                    },
+                    "message": {
+                        "id": "0000000384"
+                    },
+                    "portal": {
+                        "name": "Hotspot Guest Portal (default)"
+                    },
+                    "segment": {
+                        "number": 1,
+                        "total": 2
+                    }
+                }
+            },
+            "ecs": {
+                "version": "8.17.0"
+            },
+            "event": {
+                "category": [
+                    "configuration"
+                ],
+                "kind": "event",
+                "original": "<182>Nov 17 16:00:00.529272 cisco-ise-host CISE_Guest 0000000384 2 1  PortalName=Hotspot Guest Portal (default),",
+                "type": [
+                    "info"
+                ]
+            },
+            "host": {
+                "hostname": "cisco-ise-host"
+            },
+            "log": {
+                "syslog": {
+                    "priority": 182
+                }
+            },
+            "message": "PortalName=Hotspot Guest Portal (default),",
+            "related": {
+                "hosts": [
+                    "cisco-ise-host"
+                ]
+            },
+            "tags": [
+                "preserve_original_event"
+            ]
+        },
+        {
+            "@timestamp": "2025-11-17T16:00:00.138Z",
+            "cisco_ise": {
+                "log": {
+                    "category": {
+                        "name": "CISE_Guest"
+                    },
+                    "message": {
+                        "id": "0000000384"
+                    },
+                    "portal": {
+                        "name": "Hotspot Guest Portal (default)"
+                    },
+                    "segment": {
+                        "number": 1,
+                        "total": 2
+                    }
+                }
+            },
+            "ecs": {
+                "version": "8.17.0"
+            },
+            "event": {
+                "category": [
+                    "configuration"
+                ],
+                "kind": "event",
+                "original": "<182>Nov 17 16:00:00.138 cisco-ise-host CISE_Guest 0000000384 2 1  PortalName=Hotspot Guest Portal (default),",
+                "type": [
+                    "info"
+                ]
+            },
+            "host": {
+                "hostname": "cisco-ise-host"
+            },
+            "log": {
+                "syslog": {
+                    "priority": 182
+                }
+            },
+            "message": "PortalName=Hotspot Guest Portal (default),",
             "related": {
                 "hosts": [
                     "cisco-ise-host"
